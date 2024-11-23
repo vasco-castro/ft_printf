@@ -6,7 +6,7 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:19:57 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 16:55:36 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 19:31:04 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	lprint_chr(int c)
 {
-	return write(1, &c, 1);
+	return (write(1, &c, 1));
 }

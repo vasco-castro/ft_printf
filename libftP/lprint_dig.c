@@ -6,13 +6,13 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:33:04 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 18:33:26 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 19:29:58 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libp.h"
 
-int lprint_dig(long n, char *base)
+int	lprint_dig(long n, char *base)
 {
 	int	base_size;
 
@@ -22,5 +22,6 @@ int lprint_dig(long n, char *base)
 	else if (n < base_size)
 		return (lprint_chr(base[n]));
 	else
-		return lprint_dig(n / base_size, base) + lprint_dig(n % base_size, base);
+		return (lprint_dig(n / base_size, base)
+			+ lprint_dig(n % base_size, base));
 }

@@ -6,20 +6,20 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:49:44 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 16:54:54 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 19:30:33 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libp.h"
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!str)
-		return 0;
-	while(str[i])
+		return (0);
+	while (str[i])
 		i++;
 	return (i);
 }

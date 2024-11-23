@@ -6,7 +6,7 @@
 #    By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 20:40:58 by vsoares-          #+#    #+#              #
-#    Updated: 2024/11/23 18:32:30 by vsoares-         ###   ########.fr        #
+#    Updated: 2024/11/23 19:11:43 by vsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ re: fclean all
 t: re
 	@echo Running main test file.
 	@$(COMPILER) $(CFLAGS) main.c $(NAME) -o test
-	@./test
-	@make fclean
+# @./test
+# @make fclean
 
 .PHONY: all clean fclean re t
