@@ -6,11 +6,11 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:49:44 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 19:30:33 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 20:19:57 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libp.h"
+#include "../ft_printf.h"
 
 int	ft_strlen(char *str)
 {

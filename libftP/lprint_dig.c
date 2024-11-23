@@ -6,11 +6,11 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:33:04 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 19:29:58 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 21:56:26 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libp.h"
+#include "../ft_printf.h"
 
 int	lprint_dig(long n, char *base)
 {

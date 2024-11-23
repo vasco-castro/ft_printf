@@ -6,18 +6,20 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:21:37 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 20:17:40 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 22:00:48 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libp.h"
+#include "../ft_printf.h"
 
-int	lprint_hex(long n, char *base)
+int	lprint_hex(unsigned long n, char *base)
 {
-	if (!NEGATIVE_HEX && n < 0)
-		n *= -1;
-	if (DIG_OVERFLOW)
-		return (lprint_dig((unsigned long)n, base));
+	unsigned long	base_size;
+
+	base_size = ft_strlen(base);
+	if (n < base_size)
+		return (lprint_chr(base[n]));
 	else
-		return (lprint_dig(n, base));
+		return (lprint_hex(n / base_size, base)
+			+ lprint_hex(n % base_size, base));
 }

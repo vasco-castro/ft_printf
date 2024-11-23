@@ -6,11 +6,11 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 20:34:36 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 19:53:27 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 21:25:30 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libp.h"
+#include "ft_printf.h"
 
 static int	printer(char format, va_list ap)
 {
@@ -23,13 +23,13 @@ static int	printer(char format, va_list ap)
 	else if (format == 'p')
 		counter = lprint_ptr(va_arg(ap, void *));
 	else if (format == 'd' || format == 'i')
-		counter = lprint_dig((long)va_arg(ap, int), BASE_10);
+		counter = lprint_dig((long)va_arg(ap, int), DECIMAL);
 	else if (format == 'u')
-		counter = lprint_dig(va_arg(ap, unsigned int), BASE_10);
+		counter = lprint_dig(va_arg(ap, unsigned int), DECIMAL);
 	else if (format == 'x')
-		counter = lprint_hex((long)va_arg(ap, unsigned int), L_BASE_16);
+		counter = lprint_hex((long)va_arg(ap, unsigned int), HEXA_LOW);
 	else if (format == 'X')
-		counter = lprint_hex((long)va_arg(ap, unsigned int), U_BASE_16);
+		counter = lprint_hex((long)va_arg(ap, unsigned int), HEXA_UP);
 	else if (format == '%')
 		counter = lprint_chr(format);
 	else
