@@ -6,11 +6,23 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 20:34:36 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 21:25:30 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/11/23 22:10:04 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i])
+		i++;
+	return (i);
+}
 
 static int	printer(char format, va_list ap)
 {
