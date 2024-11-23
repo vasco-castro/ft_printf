@@ -6,13 +6,13 @@
 #    By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 20:40:58 by vsoares-          #+#    #+#              #
-#    Updated: 2024/11/23 16:54:26 by vsoares-         ###   ########.fr        #
+#    Updated: 2024/11/23 18:32:30 by vsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-CC = cc
+COMPILER = cc
 CFLAGS = -Wall -Werror -Wextra -O3
 
 RM = rm -f
@@ -24,18 +24,27 @@ SRCS = ft_printf.c libftP/ft_strlen.c \
 
 OBJS = $(SRCS:.c=.o)
 
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	@echo "Building $(NAME)."
+	@$(AR) $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	@echo "Cleaning all objects."
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@echo "Cleaning all $(NAME) files."
+	@$(RM) $(NAME)
+	@$(RM) test
 
 re: fclean all
 
-.PHONY: all clean fclean re
+t: re
+	@echo Running main test file.
+	@$(COMPILER) $(CFLAGS) main.c $(NAME) -o test
+	@./test
+	@make fclean
+
+.PHONY: all clean fclean re t
