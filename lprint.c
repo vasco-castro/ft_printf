@@ -6,7 +6,7 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 22:06:19 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 22:12:15 by vsoares-         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:58:59 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ int	lprint_chr(int c)
 
 int	lprint_str(char *str)
 {
-	int	count;
-
-	count = 0;
 	if (!str)
 		return (lprint_str("(null)"));
 	return (write(1, str, ft_strlen(str)));
