@@ -6,7 +6,7 @@
 /*   By: vsoares- <vsoares-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 20:34:36 by vsoares-          #+#    #+#             */
-/*   Updated: 2024/11/23 22:10:04 by vsoares-         ###   ########.fr       */
+/*   Updated: 2025/02/03 15:20:52 by vsoares-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	printer(char format, va_list ap)
 {
 	int	counter;
 
+	counter = 0;
 	if (format == 'c')
 		counter = lprint_chr(va_arg(ap, int));
 	else if (format == 's')
@@ -44,8 +45,6 @@ static int	printer(char format, va_list ap)
 		counter = lprint_hex((long)va_arg(ap, unsigned int), HEXA_UP);
 	else if (format == '%')
 		counter = lprint_chr(format);
-	else
-		return (-1);
 	return (counter);
 }
 
